@@ -10,7 +10,18 @@ const Todo = () => {
 
     const add = () => {
         const inputText = inputRef.current.value.trim();
-        console.log(inputText)
+        
+        if (inputText === "") {
+            return null;
+        }
+
+        const newTodo = {
+            id: Date.now(),
+            text: inputText,
+            isComplete: false,
+        }
+        setTodoList((prev) => [...prev, newTodo])
+        inputRef.current.value = "";
     }
 
     return (
