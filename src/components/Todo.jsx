@@ -20,7 +20,8 @@ const Todo = () => {
 
             {/*----todo list -----*/}
             <div>
-                <Todoitems />
+                <Todoitems text="Learn Coding" />
+                <Todoitems text="Exercise daily" />
             </div>
 
         </div>
