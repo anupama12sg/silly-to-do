@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import todo from '../assets/todo.webp'
 import Todoitems from './Todoitems';
 
 const Todo = () => {
+
+    const [todoList, setTodoList] = useState([]);
 
     const inputRef = useRef();
 
