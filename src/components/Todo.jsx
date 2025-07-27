@@ -11,6 +11,12 @@ const Todo = () => {
                 <h1 className='text-3xl font-semibold'>To-Do List</h1>
             </div>
 
+            {/*------input box------ */}
+            <div>
+                <input type="text" placeholder='Add your task' />
+                <button>Add +</button>
+            </div>
+
         </div>
     )
 }
