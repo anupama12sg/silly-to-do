@@ -10,7 +10,7 @@ const Todo = () => {
 
     const add = () => {
         const inputText = inputRef.current.value.trim();
-        
+
         if (inputText === "") {
             return null;
         }
@@ -22,6 +22,12 @@ const Todo = () => {
         }
         setTodoList((prev) => [...prev, newTodo])
         inputRef.current.value = "";
+    }
+
+    const deleteTodo = (id) => {
+        setTodoList((prevTodos) => {
+            return prevTodos.filter((todo) => todo.id !== id)
+        })
     }
 
     return (
@@ -41,8 +47,10 @@ const Todo = () => {
 
             {/*----todo list -----*/}
             <div>
-                <Todoitems text="Learn Coding" />
-                <Todoitems text="Exercise daily" />
+                {todoList.map((item, index) => {
+                    return <Todoitems key={index} text={item.text} id={item.id} isComplete={item.isComplete} />
+                })}
+
             </div>
 
         </div>

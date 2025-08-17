@@ -3,7 +3,7 @@ import tick_icon from '../assets/tick_icon.webp'
 import not_tick from '../assets/not_tick.webp'
 import delete_icon from '../assets/delete_icon.webp'
 
-const Todoitems = ({ text }) => {
+const Todoitems = ({ text, id, isComplete }) => {
     return (
         <div className='flex items-center my-3 gap-2'>
             <div className='flex flex-1 items-center cursor-pointer'>
