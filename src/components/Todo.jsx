@@ -48,7 +48,7 @@ const Todo = () => {
             {/*----todo list -----*/}
             <div>
                 {todoList.map((item, index) => {
-                    return <Todoitems key={index} text={item.text} id={item.id} isComplete={item.isComplete} />
+                    return <Todoitems key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo} />
                 })}
 
             </div>
