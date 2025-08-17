@@ -3,11 +3,11 @@ import tick_icon from '../assets/tick_icon.webp'
 import not_tick from '../assets/not_tick.webp'
 import delete_icon from '../assets/delete_icon.webp'
 
-const Todoitems = ({ text, id, isComplete, deleteTodo }) => {
+const Todoitems = ({ text, id, isComplete, deleteTodo, toggle }) => {
     return (
-        <div className='flex items-center my-3 gap-2'>
+        <div onClick={() => { toggle(id) }} className='flex items-center my-3 gap-2'>
             <div className='flex flex-1 items-center cursor-pointer'>
-                <img src={tick_icon} alt="" className='w-7' />
+                <img src={isComplete ? tick_icon : not_tick} alt="" className='w-7' />
                 <p className='text-slate-700 ml-4 text-[17px]'>{text}</p>
             </div>
 
