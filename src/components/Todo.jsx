@@ -30,6 +30,16 @@ const Todo = () => {
         })
     }
 
+    const toggle = (id) => {
+        setTodoList((prevTodos) => {
+            return prevTodos.map((todo) => {
+                if (todo.id === id) {
+                    return { ...todo, isComplete: true }
+                }
+            })
+        })
+    }
+
     return (
         <div className='bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl'>
 
